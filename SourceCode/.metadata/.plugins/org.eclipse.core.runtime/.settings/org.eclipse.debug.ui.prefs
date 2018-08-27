@@ -1,0 +1,11 @@
+com.tibco.bw.core.design.debug.ui.launch.existingApplications=order_api/
+com.tibco.bw.core.design.debug.ui.launch.processesArg=order_api\=order_api.module.Process/
+com.tibco.bw.core.design.debug.ui.launch.selectedApplications=order_api/
+com.tibco.bw.core.design.debug.ui.launch.selectedModules=order_api.module/
+com.tibco.bw.core.design.debug.ui.launch.selectedProcesses=order_api.module\=order_api.module.Process/
+eclipse.preferences.version=1
+org.eclipse.debug.ui.DebugView+com.tibco.bw.core.design.debug.ui.actions.BWShowStackByTempleteAction=true
+org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<launchPerspectives/>\r\n
+org.eclipse.debug.ui.activate_debug_view=false
+org.eclipse.debug.ui.activate_workbench=false
+preferredDetailPanes=DefaultDetailPane\:DefaultDetailPane|

@@ -1,0 +1,354 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8090",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/orders/{id}" : {
+      "get" : {
+        "description" : "",
+        "operationId" : "get-orders",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a orderResponseWithStatus to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/orderResponseWithStatus"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "delivery" : {
+      "type" : "object",
+      "properties" : {
+        "href" : {
+          "type" : "string"
+        },
+        "groups" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/groups",
+            "uniqueItems" : false
+          }
+        },
+        "lastUpdatedDate" : {
+          "type" : "string"
+        }
+      }
+    },
+    "address" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "company" : {
+          "type" : "string"
+        },
+        "lineOne" : {
+          "type" : "string"
+        },
+        "lineTwo" : {
+          "type" : "string"
+        },
+        "city" : {
+          "type" : "string"
+        },
+        "state" : {
+          "type" : "string"
+        },
+        "zip" : {
+          "type" : "string"
+        },
+        "country" : {
+          "type" : "string"
+        },
+        "phone" : {
+          "type" : "string"
+        }
+      }
+    },
+    "accountAddress" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        }
+      }
+    },
+    "bag" : {
+      "type" : "object",
+      "properties" : {
+        "items" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/items",
+            "uniqueItems" : false
+          }
+        },
+        "itemCount" : {
+          "type" : "string"
+        }
+      }
+    },
+    "groups" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "href" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "address" : {
+          "$ref" : "#/definitions/address"
+        }
+      }
+    },
+    "unnamed" : {
+      "type" : "object",
+      "properties" : {
+        "address" : {
+          "$ref" : "#/definitions/address"
+        },
+        "relationships" : {
+          "$ref" : "#/definitions/relationships"
+        },
+        "giftRegistry" : {
+          "$ref" : "#/definitions/giftRegistry"
+        }
+      }
+    },
+    "totals" : {
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "label" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "amount" : {
+          "type" : "string"
+        }
+      }
+    },
+    "accountPaymentMethod" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        }
+      }
+    },
+    "exceptions" : {
+      "type" : "object",
+      "properties" : {
+        "errorCode" : {
+          "type" : "string"
+        },
+        "errorMessage" : {
+          "type" : "string"
+        },
+        "errorSubcode" : {
+          "type" : "string"
+        },
+        "traceId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "billing" : {
+      "type" : "object",
+      "properties" : {
+        "href" : {
+          "type" : "string"
+        },
+        "creditCards" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/creditCards",
+            "uniqueItems" : false
+          }
+        },
+        "relationships" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/relationships",
+            "uniqueItems" : false
+          }
+        },
+        "unnamed" : {
+          "$ref" : "#/definitions/unnamed"
+        }
+      }
+    },
+    "giftRegistry" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        }
+      }
+    },
+    "relationships" : {
+      "type" : "object",
+      "properties" : {
+        "accountAddress" : {
+          "$ref" : "#/definitions/accountAddress"
+        },
+        "accountPaymentMethod" : {
+          "$ref" : "#/definitions/accountPaymentMethod"
+        }
+      }
+    },
+    "orderResponseWithStatus" : {
+      "type" : "object",
+      "properties" : {
+        "href" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "number" : {
+          "type" : "string"
+        },
+        "status" : {
+          "$ref" : "#/definitions/status"
+        },
+        "bag" : {
+          "$ref" : "#/definitions/bag"
+        },
+        "delivery" : {
+          "$ref" : "#/definitions/delivery"
+        },
+        "billing" : {
+          "$ref" : "#/definitions/billing"
+        },
+        "totals" : {
+          "$ref" : "#/definitions/totals"
+        }
+      }
+    },
+    "creditCards" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "href" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "number" : {
+          "type" : "string"
+        },
+        "expiryMonth" : {
+          "type" : "string"
+        },
+        "expiryYear" : {
+          "type" : "string"
+        },
+        "status" : {
+          "$ref" : "#/definitions/status"
+        },
+        "tags" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "uniqueItems" : false
+          }
+        },
+        "address" : {
+          "$ref" : "#/definitions/address"
+        },
+        "relationships" : {
+          "$ref" : "#/definitions/relationships"
+        },
+        "giftRegistry" : {
+          "$ref" : "#/definitions/giftRegistry"
+        }
+      }
+    },
+    "sku" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "quantity" : {
+          "type" : "string"
+        }
+      }
+    },
+    "items" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "quantity" : {
+          "type" : "string"
+        },
+        "sku" : {
+          "$ref" : "#/definitions/sku"
+        },
+        "deliveryOptions" : {
+          "type" : "string"
+        },
+        "lastUpdatedDate" : {
+          "type" : "string"
+        }
+      }
+    },
+    "status" : {
+      "type" : "object",
+      "properties" : {
+        "submittable" : {
+          "type" : "string"
+        },
+        "code" : {
+          "type" : "string"
+        },
+        "exceptions" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/exceptions",
+            "uniqueItems" : false
+          }
+        }
+      }
+    }
+  }
+}

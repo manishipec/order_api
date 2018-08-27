@@ -1,0 +1,5 @@
+{"records": [{
+    "jsonSchemaLocation": "/order_api.module/Service Descriptors/order_api.module.Process-orders.json",
+    "conversionType": "linked",
+    "xsdSchemaTargetNamespace": "http://www.tibco.com/schemas/Schema_BW/Schemas/shoppingBag.xsd"
+}]}

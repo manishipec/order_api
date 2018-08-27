@@ -1,0 +1,7 @@
+{
+    "records": [],
+    "resources": [{
+        "location": "Service Descriptors/order_api.module.Process-orders.json",
+        "type": "generated"
+    }]
+}

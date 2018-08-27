@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://www.tibco.com/schemas/Schema_BW/Schemas/shoppingBag.xsd"
+	 targetNamespace="http://www.tibco.com/schemas/Schema_BW/Schemas/shoppingBag.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="orderResponseWithStatus">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="href" minOccurs="0"/>
+				<xs:element ref="id" minOccurs="0"/>
+				<xs:element ref="number" minOccurs="0"/>
+				<xs:element ref="status" minOccurs="0"/>
+				<xs:element ref="bag" minOccurs="0"/>
+				<xs:element ref="delivery" minOccurs="0"/>
+				<xs:element ref="billing" minOccurs="0"/>
+				<xs:element ref="totals" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="href" type="xs:string"/>
+	<xs:element name="id" type="xs:string"/>
+	<xs:element name="number" type="xs:string"/>
+	<xs:element name="status">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="submittable" minOccurs="0"/>
+				<xs:element ref="code" minOccurs="0"/>
+				<xs:element ref="exceptions" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="bag">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="items" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="itemCount" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="submittable" type="xs:string"/>
+	<xs:element name="code" type="xs:string"/>
+	<xs:element name="exceptions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="errorCode" minOccurs="0"/>
+				<xs:element ref="errorMessage" minOccurs="0"/>
+				<xs:element ref="errorSubcode" minOccurs="0"/>
+				<xs:element ref="traceId" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="errorCode" type="xs:string"/>
+	<xs:element name="errorMessage" type="xs:string"/>
+	<xs:element name="errorSubcode" type="xs:string"/>
+	<xs:element name="traceId" type="xs:string"/>
+	<xs:element name="items">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="id" minOccurs="0"/>
+				<xs:element ref="quantity" minOccurs="0"/>
+				<xs:element ref="sku" minOccurs="0"/>
+				<xs:element ref="deliveryOptions" minOccurs="0"/>
+				<xs:element ref="lastUpdatedDate" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="itemCount" type="xs:string"/>
+	<xs:element name="quantity" type="xs:string"/>
+	<xs:element name="sku">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="id" minOccurs="0"/>
+				<xs:element ref="quantity" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="deliveryOptions" type="xs:string"/>
+	<xs:element name="lastUpdatedDate" type="xs:string"/>
+	<xs:element name="delivery">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="href" minOccurs="0"/>
+				<xs:element ref="groups" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="lastUpdatedDate" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="billing">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="href" minOccurs="0"/>
+				<xs:element ref="creditCards" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="relationships" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="unnamed" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="totals">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="name" minOccurs="0"/>
+				<xs:element ref="label" minOccurs="0"/>
+				<xs:element ref="type" minOccurs="0"/>
+				<xs:element ref="amount" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="groups">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="id" minOccurs="0"/>
+				<xs:element ref="href" minOccurs="0"/>
+				<xs:element ref="type" minOccurs="0"/>
+				<xs:element ref="address" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="type" type="xs:string"/>
+	<xs:element name="address">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="id" minOccurs="0"/>
+				<xs:element ref="firstName" minOccurs="0"/>
+				<xs:element ref="lastName" minOccurs="0"/>
+				<xs:element ref="company" minOccurs="0"/>
+				<xs:element ref="lineOne" minOccurs="0"/>
+				<xs:element ref="lineTwo" minOccurs="0"/>
+				<xs:element ref="city" minOccurs="0"/>
+				<xs:element ref="state" minOccurs="0"/>
+				<xs:element ref="zip" minOccurs="0"/>
+				<xs:element ref="country" minOccurs="0"/>
+				<xs:element ref="phone" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="firstName" type="xs:string"/>
+	<xs:element name="lastName" type="xs:string"/>
+	<xs:element name="company" type="xs:string"/>
+	<xs:element name="lineOne" type="xs:string"/>
+	<xs:element name="lineTwo" type="xs:string"/>
+	<xs:element name="city" type="xs:string"/>
+	<xs:element name="state" type="xs:string"/>
+	<xs:element name="zip" type="xs:string"/>
+	<xs:element name="country" type="xs:string"/>
+	<xs:element name="phone" type="xs:string"/>
+	<xs:element name="creditCards">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="id" minOccurs="0"/>
+				<xs:element ref="href" minOccurs="0"/>
+				<xs:element ref="type" minOccurs="0"/>
+				<xs:element ref="number" minOccurs="0"/>
+				<xs:element ref="expiryMonth" minOccurs="0"/>
+				<xs:element ref="expiryYear" minOccurs="0"/>
+				<xs:element ref="status" minOccurs="0"/>
+				<xs:element ref="tags" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="address" minOccurs="0"/>
+				<xs:element ref="relationships" minOccurs="0"/>
+				<xs:element ref="giftRegistry" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="relationships">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="accountAddress" minOccurs="0"/>
+				<xs:element ref="accountPaymentMethod" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="expiryMonth" type="xs:string"/>
+	<xs:element name="expiryYear" type="xs:string"/>
+	<xs:element name="tags" type="xs:string"/>
+	<xs:element name="giftRegistry">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="id" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="accountAddress">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="id" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="accountPaymentMethod">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="id" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="unnamed">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="address" minOccurs="0"/>
+				<xs:element ref="relationships" minOccurs="0"/>
+				<xs:element ref="giftRegistry" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="name" type="xs:string"/>
+	<xs:element name="label" type="xs:string"/>
+	<xs:element name="amount" type="xs:string"/>
+	<xs:element name="addItemsRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="addItems" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="addItems">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="addItem" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="addItem">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="skuId" minOccurs="0"/>
+				<xs:element ref="quantity" minOccurs="0"/>
+				<xs:element ref="deliveryOption" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="skuId" type="xs:string"/>
+	<xs:element name="deliveryOption">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="type" minOccurs="0"/>
+				<xs:element ref="selected" minOccurs="0"/>
+				<xs:element ref="groupId" minOccurs="0"/>
+				<xs:element ref="zip" minOccurs="0"/>
+				<xs:element ref="storeId" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="selected" type="xs:string"/>
+	<xs:element name="groupId" type="xs:string"/>
+	<xs:element name="storeId" type="xs:string"/>
+</xs:schema>

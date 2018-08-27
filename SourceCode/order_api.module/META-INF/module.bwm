@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_GjbvMKVzEeiIIfzfN0etUQ" targetNamespace="http://tns.tibco.com/bw/composite/order_api.module" name="order_api.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_WjCmgKVzEeiIIfzfN0etUQ" name="orders" promote="ComponentProcess/orders">
+    <sca:interface.wsdl xmi:id="_WjPa0KVzEeiIIfzfN0etUQ" interface="http://xmlns.example.com/20180821145044PLT#wsdl.interface(orders)" scaext:wsdlLocation="../Processes/order_api/module/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_WjZy4KVzEeiIIfzfN0etUQ" name="RestService" path="/orders/{id}" docBasePath="http://localhost:7777/order_api.module" docResourcePath="orders" basePath="/" connector="order_api.module.orders" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/order_api.module.Process-orders.json">
+      <operation xmi:id="_Wjf5gKVzEeiIIfzfN0etUQ" operationName="get" nickname="get-orders" httpMethod="GET" responseStyle="element" requestStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_WlPl8KVzEeiIIfzfN0etUQ">
+        <parameterMapping xmi:id="_WlRbIKVzEeiIIfzfN0etUQ" parameterName="id" parameterType="Path" required="true"/>
+      </parameters>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_WjggkKVzEeiIIfzfN0etUQ" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_HyXAcKVzEeiIIfzfN0etUQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Hyp7YKVzEeiIIfzfN0etUQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Hyx3MKVzEeiIIfzfN0etUQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Hy2vsKVzEeiIIfzfN0etUQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Hy8PQKVzEeiIIfzfN0etUQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_HzBu0KVzEeiIIfzfN0etUQ" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_HzHOYKVzEeiIIfzfN0etUQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_HQlJEKVzEeiIIfzfN0etUQ" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_HQmXMKVzEeiIIfzfN0etUQ" processName="order_api.module.Process"/>
+    <sca:service xmi:id="_Wi7RwKVzEeiIIfzfN0etUQ" name="orders">
+      <sca:interface.wsdl xmi:id="_Wi9G8KVzEeiIIfzfN0etUQ" interface="http://xmlns.example.com/20180821145044PLT#wsdl.interface(orders)" scaext:wsdlLocation="../Processes/order_api/module/Process.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
