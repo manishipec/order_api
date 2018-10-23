@@ -1486,3 +1486,76 @@ Command-line arguments:  -application com.tibco.bw.core.design.project.BwDesignA
 
 !ENTRY org.eclipse.core.jobs 2 2 2018-10-18 01:26:52.626
 !MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.tibco.bw.core.design.project.BWManifestProjectBuilder$NotifyThorJob
+!SESSION 2018-10-23 01:32:19.692 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -application com.tibco.bw.core.design.project.BwDesignApplication export -ear order_api C:\Users\Manish\Documents\JENKINS\workspace\BuildBWCEArtifacts\Artifacts
+Command-line arguments:  -application com.tibco.bw.core.design.project.BwDesignApplication -ws win32 -data C:\Users\Manish\Documents\JENKINS\workspace\BuildBWCEArtifacts\SourceCode export -ear order_api C:\Users\Manish\Documents\JENKINS\workspace\BuildBWCEArtifacts\Artifacts
+
+!ENTRY com.tibco.bw.sharedresource.jdbc.driver.template 4 0 2018-10-23 01:32:20.696
+!MESSAGE [SCR] Component definition XMLs not found in bundle com.tibco.bw.sharedresource.jdbc.driver.template. The component header value is OSGI-INF/*.xml
+
+!ENTRY com.tibco.bw.sharedresource.jdbc.driver.template 4 0 2018-10-23 01:32:20.697
+!MESSAGE [SCR] Component definition XMLs not found in bundle com.tibco.bw.sharedresource.jdbc.driver.template. The component header value is OSGI-INF/*.xml
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-10-23 01:32:20.949
+!MESSAGE Both 'com.tibco.amf.sharedresource.model.transport.eclipse' and 'com.tibco.amf.sharedresource.model.transport.eclipse' register a package for 'http://xsd.tns.tibco.com/amf/models/sharedresource/httpconnector'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-10-23 01:32:20.951
+!MESSAGE Both 'com.tibco.bw.core.model.eclipse' and 'com.tibco.bw.core.model.eclipse' register a package for 'http://ns.tibco.com/bw/core/internalactivity'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-10-23 01:32:20.953
+!MESSAGE Both 'com.tibco.bw.sharedresource.http.model' and 'com.tibco.bw.sharedresource.http.model' register a package for 'http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-10-23 01:32:20.954
+!MESSAGE Both 'com.tibco.amf.sharedresource.model.data.eclipse' and 'com.tibco.bw.sharedresource.jdbc.model' register a package for 'http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-10-23 01:32:20.955
+!MESSAGE Both 'com.tibco.amf.sca.model.eclipse' and 'com.tibco.bw.sharedresource.ws.policy.model' register a package for 'http://schemas.xmlsoap.org/ws/2004/09/policy'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-10-23 01:32:20.955
+!MESSAGE Both 'com.tibco.amf.wsdl.extensions.eclipse' and 'com.tibco.bw.wsdl.extensions' register a package for 'http://xsd.tns.tibco.com/wsdl/models/extensions/soap/tibcojms'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-10-23 01:32:20.956
+!MESSAGE Both 'com.tibco.amf.wsdl.extensions.eclipse' and 'com.tibco.bw.wsdl.extensions' register a package for 'http://xsd.tns.tibco.com/wsdl/models/soap12'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-10-23 01:32:20.963
+!MESSAGE Both 'com.tibco.bw.sharedresource.identity.model' and 'com.tibco.bw.sharedresource.ws.policy.model' register an extension parser for 'policy'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-10-23 01:32:20.963
+!MESSAGE Both 'com.tibco.bw.sharedresource.trinity.securityprovider.model' and 'com.tibco.trinity.securityprovider.model.eclipse' register an extension parser for 'auth'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-10-23 01:32:20.963
+!MESSAGE Both 'com.tibco.bw.sharedresource.trinity.securityprovider.model' and 'com.tibco.trinity.securityprovider.model.eclipse' register an extension parser for 'identity'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-10-23 01:32:20.964
+!MESSAGE Both 'com.tibco.bw.sharedresource.trinity.securityprovider.model' and 'com.tibco.trinity.securityprovider.model.eclipse' register an extension parser for 'userid'
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-10-23 01:32:21.053
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.emf.validation 2 70 2018-10-23 01:32:26.905
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.identity.subject.editor.com.tibco.trinity.identity.subject.editor.validation.HasOneStoreConstraint" could not find target EMF type "SubjectConfiguration."
+
+!ENTRY org.eclipse.emf.validation 2 70 2018-10-23 01:32:26.905
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.identity.subject.editor.com.tibco.trinity.identity.subject.editor.validation.KeyAliasNotNullConstraint" could not find target EMF type "SubjectConfiguration."
+
+!ENTRY org.eclipse.emf.validation 2 70 2018-10-23 01:32:26.905
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.identity.subject.editor.com.tibco.trinity.identity.subject.editor.validation.KeyPasswordNotNullConstraint" could not find target EMF type "SubjectConfiguration."
+
+!ENTRY org.eclipse.emf.validation 2 70 2018-10-23 01:32:26.906
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.identity.trust.editor.constraint" could not find target EMF type "TrustConfiguration."
+
+!ENTRY org.eclipse.emf.validation 2 70 2018-10-23 01:32:27.138
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.ssl.editor.com.tibco.trinity.ssl.editor.invalid.remote.host.constraint" could not find target EMF type "SSLServerConfiguration."
+
+!ENTRY org.eclipse.bpel.validator 1 0 2018-10-23 01:32:27.417
+!MESSAGE Validator Startup 25ms
+
+!ENTRY com.tibco.zion.common 1 0 2018-10-23 01:32:27.980
+!MESSAGE The project 'order_api.module' will be exported.
+
+!ENTRY org.eclipse.core.jobs 2 2 2018-10-23 01:32:32.489
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.tibco.bw.core.design.project.BWManifestProjectBuilder$NotifyThorJob
