@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ear_generate" default="all">
+    <property file="build.properties"/>
+	<import file="C:/BuildScriptUpdated/BuildAndDeploy/0-common/svn/git-functions.xml" />
+
+	<target name="all" depends="PackageEAR"/>
+	
+		
+		
+		
+		<target name="PackageEAR">
+			<exec executable="C:\tibco\bwce\bwce\2.3\bin\bwdesign.exe" failonerror="true">   
+			<env key="PATH" path="C:\tibco\bwce\bwce\2.3\bin"/> 
+			<arg value="-data"/>
+			<arg value="C:\Users\Manish\Documents\JENKINS\workspace\BuildBWCEArtifacts\SourceCode"/>  
+			<arg value="export"/> 
+			<arg value="-ear"/>			
+			<arg value="${archiveName}"/> 
+			<arg value="C:\Users\Manish\Documents\JENKINS\workspace\BuildBWCEArtifacts\Artifacts"/> 	
+			
+			</exec> 
+			
+			<copy todir="C:\Users\Manish\Documents\JENKINS\workspace\BuildBWCEArtifacts\Artifacts">
+				<fileset dir="${WORKSPACE_PATH}/${PROJECT_NAME}/Artifacts">
+					<include name= "${PROJECT_NAME}.html"/>
+					<include name = "${PROJECT_NAME}.txt"/>
+					<include name= "${PROJECT_NAME}.xml"/>
+				</fileset>
+			</copy>
+			<echo>Workspace ${WORKSPACE_PATH}/${PROJECT_NAME}</echo>
+			<!--<copy src="C:\Users\Manish\Documents\JENKINS\workspace\BuildProject\Artifacts\*.ear" dest="${WORKSPACE_PATH}/${PROJECT_NAME}/Artifacts"/>-->
+			<!--<git-add path="C:/Users/Manish/Documents/GitHub/JenkinsBWCE" recursive="true" git-location="C:/Users/Manish/Documents/GitHub/JenkinsBWCE" />-->
+			<git-add path="C:\Users\Manish\Documents\JENKINS\workspace\BuildBWCEArtifacts\Artifacts" recursive="true" git-location="C:\Users\Manish\Documents\JENKINS\workspace\BuildBWCEArtifacts\Artifacts" />
+		</target>
+		
+</project>
+
+
+
+
