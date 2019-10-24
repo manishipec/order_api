@@ -95,7 +95,7 @@
 <h1>Test Results</h1>
 <table width="100%">
 <tr>
-<td align="left">Date report: 2019/02/08 03:20</td><td align="right">Designed for use with <a href="http://jmeter.apache.org/">JMeter</a> and <a href="http://ant.apache.org">Ant</a>.</td>
+<td align="left">Date report: 2019/10/24 20:19</td><td align="right">Designed for use with <a href="http://jmeter.apache.org/">JMeter</a> and <a href="http://ant.apache.org">Ant</a>.</td>
 </tr>
 </table>
 <hr size="1">
@@ -105,7 +105,7 @@
 <th># Samples</th><th>Failures</th><th>Success Rate</th><th>Average Time</th><th>Min Time</th><th>Max Time</th>
 </tr>
 <tr valign="top" class="Failure">
-<td align="center">3</td><td align="center">3</td><td align="center">0.00%</td><td align="center">384 ms</td><td align="center">0 ms</td><td align="center">1107 ms</td>
+<td align="center">3</td><td align="center">3</td><td align="center">0.00%</td><td align="center">7040 ms</td><td align="center">0 ms</td><td align="center">21081 ms</td>
 </tr>
 </table>
 <hr align="center" width="95%" size="1">
@@ -126,14 +126,14 @@
 <th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
 </tr>
 <tr>
-<td>CICDDemoTest 1-1</td><td align="center">1</td><td align="right">0</td><td align="right">2057</td><td align="center">false</td>
+<td>CICDDemoTest 1-1</td><td align="center">1</td><td align="right">0</td><td align="right">2047</td><td align="center">false</td>
 </tr>
 </table>
 </div>
 </td>
 </tr>
 <tr valign="top" class="Failure">
-<td><a href="#HTTP Request">HTTP Request</a></td><td align="center">1</td><td align="center">1</td><td align="right">0.00%</td><td align="right">1107 ms</td><td align="right">1107 ms</td><td align="right">1107 ms</td><td align="center"><a href="javascript:change('page_details_2')"><img alt="expand/collapse" src="expand.png" id="page_details_2_image"></a></td>
+<td><a href="#HTTP Request">HTTP Request</a></td><td align="center">1</td><td align="center">1</td><td align="right">0.00%</td><td align="right">21081 ms</td><td align="right">21081 ms</td><td align="right">21081 ms</td><td align="center"><a href="javascript:change('page_details_2')"><img alt="expand/collapse" src="expand.png" id="page_details_2_image"></a></td>
 </tr>
 <tr class="page_details" id="page_details_2">
 <td bgcolor="#FF0000" colspan="8">
@@ -144,14 +144,14 @@
 <th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
 </tr>
 <tr>
-<td>CICDDemoTest 1-1</td><td align="center">1</td><td align="right">1107</td><td align="right">2225</td><td align="center">false</td>
+<td>CICDDemoTest 1-1</td><td align="center">1</td><td align="right">21081</td><td align="right">2133</td><td align="center">false</td>
 </tr>
 </table>
 </div>
 </td>
 </tr>
 <tr valign="top" class="Failure">
-<td><a href="#BWCEAppTestResult">BWCEAppTestResult</a></td><td align="center">1</td><td align="center">1</td><td align="right">0.00%</td><td align="right">44 ms</td><td align="right">44 ms</td><td align="right">44 ms</td><td align="center"><a href="javascript:change('page_details_3')"><img alt="expand/collapse" src="expand.png" id="page_details_3_image"></a></td>
+<td><a href="#BWCEAppTestResult">BWCEAppTestResult</a></td><td align="center">1</td><td align="center">1</td><td align="right">0.00%</td><td align="right">38 ms</td><td align="right">38 ms</td><td align="right">38 ms</td><td align="center"><a href="javascript:change('page_details_3')"><img alt="expand/collapse" src="expand.png" id="page_details_3_image"></a></td>
 </tr>
 <tr class="page_details" id="page_details_3">
 <td bgcolor="#FF0000" colspan="8">
@@ -162,7 +162,7 @@
 <th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
 </tr>
 <tr>
-<td>CICDDemoTest 1-1</td><td align="center">1</td><td align="right">44</td><td align="right">353</td><td align="center">false</td>
+<td>CICDDemoTest 1-1</td><td align="center">1</td><td align="right">38</td><td align="right">353</td><td align="center">false</td>
 </tr>
 </table>
 </div>
@@ -194,10 +194,10 @@
 <th>Response</th><th>Failure Message</th><th>Response Data</th>
 </tr>
 <tr>
-<td>Non HTTP response code: java.net.ConnectException - Non HTTP response message: Connection refused: connect</td><td>Test failed: text expected to equal /
+<td>Non HTTP response code: java.net.ConnectException - Non HTTP response message: Connection timed out: connect</td><td>Test failed: text expected to equal /
 
-****** received  : [[[java.net.ConnectException: Connection refused: connect&#13;
-	at java.net.DualStackPlainSocketImpl.connec...]]]
+****** received  : [[[java.net.ConnectException: Connection timed out: connect&#13;
+	at java.net.DualStackPlainSocketImpl.conn...]]]
 
 ****** comparison: [[[Hello Manish                                                                                           ]]]
 
